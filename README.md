@@ -1,24 +1,8 @@
-# README
+# Aufgabe 2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Die API hat folgende probleme:
+* Response ist Plaintext und kein JSON
+* Im Content-Type Header steht text/plain statt application/json
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Lösung:
+* Reverse-Proxy zwischenschalten z.B. Nginx, da man den Code nicht bearbeiten soll. Der Reverse-Proxy setzt den Content-Type im Header richtig und passt die Response an, sodass es ein JSON ist
